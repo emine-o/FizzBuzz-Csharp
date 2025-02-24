@@ -13,7 +13,14 @@ namespace FizzBuzz
             string result = "";
             for (int num = 1; num <= 100; num++)
             {
-                result = $"{result} {num}";
+                if (num % 3 == 0)
+                {
+                    result = $"{result} Fizz";
+                }
+                else
+                {
+                    result = $"{result} {num}";
+                }
             }
             return result;
         }
