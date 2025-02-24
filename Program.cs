@@ -17,6 +17,10 @@ namespace FizzBuzz
                 {
                     result = $"{result} Fizz";
                 }
+                else if (num % 5 == 0)
+                {
+                    result = $"{result} Buzz";
+                }
                 else
                 {
                     result = $"{result} {num}";
