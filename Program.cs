@@ -15,7 +15,14 @@ namespace FizzBuzz
             {
                 if (num % 11 == 0)
                 {
-                    result = $"{result} Bong";
+                    if (num % 13 == 0)
+                    {
+                        result = $"{result} FezzBong";
+                    }
+                    else
+                    {
+                        result = $"{result} Bong";
+                    }
                 }
                 else if (num % 3 == 0)
                 {
@@ -23,33 +30,76 @@ namespace FizzBuzz
                     {
                         if (num % 7 == 0)
                         {
-                            result = $"{result} FizzBuzzBang";
+                            if (num % 13 == 0)
+                            {
+                                result = $"{result} FizzFezzBuzzBang";
+                            }
+                            else
+                            {
+                                result = $"{result} FizzBuzzBang";
+                            }
                         }
-                        result = $"{result} FizzBuzz";
+                        else
+                        {
+                            result = $"{result} FizzBuzz";
+                        }
                     }
                     else if (num % 7 == 0)
                     {
-                        result = $"{result} FizzBang";
+                        if (num % 7 == 0)
+                        {
+                            result = $"{result} FizzFezzBang";
+                        }
+                        else
+                        {
+                            result = $"{result} FizzBang";
+                        }
+                    }
+                    else if (num % 13 == 0)
+                    {
+                        result = $"{result} FizzFezz";
                     }
                     else
                     {
-                    result = $"{result} Fizz";
+                        result = $"{result} Fizz";
                     }
                 }
                 else if (num % 5 == 0)
                 {
                     if (num % 7 == 0)
                     {
-                        result = $"{result} BuzzBang";
+                        if (num % 13 == 0)
+                        {
+                            result = $"{result} FezzBuzzBang";
+                        }
+                        else
+                        {
+                            result = $"{result} BuzzBang";
+                        }
+                    }
+                    else if (num % 13 == 0)
+                    {
+                        result = $"{result} FezzBuzz";
                     }
                     else
                     {
-                    result = $"{result} Buzz";
+                        result = $"{result} Buzz";
                     }
                 }
                 else if (num % 7 == 0)
                 {
-                    result = $"{result} Bang";
+                    if (num % 13 == 0)
+                    {
+                        result = $"{result} FezzBang";
+                    }
+                    else
+                    {
+                        result = $"{result} Bang";
+                    }
+                }
+                else if (num % 13 == 0)
+                {
+                    result = $"{result} Fezz";
                 }
                 else
                 {
