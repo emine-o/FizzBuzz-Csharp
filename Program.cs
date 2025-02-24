@@ -11,19 +11,35 @@ namespace FizzBuzz
         public static string GetFizzBuzz()
         {
             string result = "";
-            for (int num = 1; num <= 100; num++)
+            for (int num = 1; num <= 105; num++)
             {
-                if (num % 3 == 0 && num % 5 == 0)
+                if (num % 3 == 0)
                 {
-                    result = $"{result} FizzBuzz";
-                }
-                else if (num % 3 == 0)
-                {
+                    if (num % 5 == 0)
+                    {
+                        if (num % 7 == 0)
+                        {
+                            result = $"{result} FizzBuzzBang";
+                        }
+                        result = $"{result} FizzBuzz";
+                    }
+                    else if (num % 7 == 0)
+                    {
+                        result = $"{result} FizzBang";
+                    }
                     result = $"{result} Fizz";
                 }
                 else if (num % 5 == 0)
                 {
+                    if (num % 7 == 0)
+                    {
+                        result = $"{result} BuzzBang";
+                    }
                     result = $"{result} Buzz";
+                }
+                else if (num % 7 == 0)
+                {
+                    result = $"{result} Bang";
                 }
                 else
                 {
