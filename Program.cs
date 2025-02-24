@@ -11,7 +11,7 @@ namespace FizzBuzz
         public static string GetFizzBuzz()
         {
             var result = new List<string>{};
-            for (int num = 1; num <= 100; num++)
+            for (int num = 1; num <= 150; num++)
             {
                 string output = "";
                 if (num % 3 == 0)
@@ -21,6 +21,14 @@ namespace FizzBuzz
                 if (num % 5 == 0)
                 {
                     output += "Buzz";
+                }
+                if (num % 7 == 0)
+                {
+                    output += "Bang";
+                }
+                if (num % 11 == 0)
+                {
+                    output = "Bong";
                 }
                 if (output == "")
                 {
