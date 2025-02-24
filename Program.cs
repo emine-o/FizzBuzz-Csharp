@@ -17,7 +17,7 @@ namespace FizzBuzz
                 {
                     result = $"{result} FizzBuzz";
                 }
-                if (num % 3 == 0)
+                else if (num % 3 == 0)
                 {
                     result = $"{result} Fizz";
                 }
