@@ -11,7 +11,7 @@ namespace FizzBuzz
         public static string GetFizzBuzz()
         {
             var result = new List<string>{};
-            for (int num = 1; num <= 150; num++)
+            for (int num = 1; num <= 255; num++)
             {
                 string output = "";
                 if (num % 3 == 0)
@@ -29,6 +29,18 @@ namespace FizzBuzz
                 if (num % 11 == 0)
                 {
                     output = "Bong";
+                }
+                if (num % 13 == 0)
+                {
+                    if (!output.Contains('B'))
+                    {
+                        output += "Fezz";
+                    }
+                    else
+                    {
+                        int indexOfB = output.IndexOf('B');
+                        output = output.Insert(indexOfB, "Fezz");
+                    }
                 }
                 if (output == "")
                 {
