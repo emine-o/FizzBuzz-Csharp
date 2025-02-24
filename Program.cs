@@ -13,7 +13,11 @@ namespace FizzBuzz
             string result = "";
             for (int num = 1; num <= 105; num++)
             {
-                if (num % 3 == 0)
+                if (num % 11 == 0)
+                {
+                    result = $"{result} Bong";
+                }
+                else if (num % 3 == 0)
                 {
                     if (num % 5 == 0)
                     {
@@ -27,7 +31,10 @@ namespace FizzBuzz
                     {
                         result = $"{result} FizzBang";
                     }
+                    else
+                    {
                     result = $"{result} Fizz";
+                    }
                 }
                 else if (num % 5 == 0)
                 {
@@ -35,7 +42,10 @@ namespace FizzBuzz
                     {
                         result = $"{result} BuzzBang";
                     }
+                    else
+                    {
                     result = $"{result} Buzz";
+                    }
                 }
                 else if (num % 7 == 0)
                 {
