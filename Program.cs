@@ -10,8 +10,13 @@ namespace FizzBuzz
         }
         public static string GetFizzBuzz()
         {
-            return "result";
+            var output = new List<string>{};
+            for (int num = 1; num <= 100; num++)
+            {
+                output.Add(num.ToString());
+            }
+            var result = string.Join(" ", output);
+            return result;
         }
-
     }
 }
