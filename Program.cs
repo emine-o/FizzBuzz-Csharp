@@ -10,8 +10,12 @@ namespace FizzBuzz
         }
         public static string GetFizzBuzz()
         {
-            return "result";
+            string result = "";
+            for (int num = 1; num <= 100; num++)
+            {
+                result = $"{result} {num}";
+            }
+            return result;
         }
-
     }
 }
