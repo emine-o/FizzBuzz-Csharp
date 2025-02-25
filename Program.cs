@@ -42,6 +42,19 @@ namespace FizzBuzz
                         output = output.Insert(indexOfB, "Fezz");
                     }
                 }
+                if (num % 17 == 0)
+                {
+                    if (output.Length >= 8)
+                    {
+                        var prints = new List<string>{};
+                        for (int index = 0; index < output.Length; index += 4)
+                        {
+                            prints.Add(output.Substring(index, 4));
+                        }
+                        prints.Reverse();
+                        output = string.Join("", prints);
+                    }
+                }
                 if (output == "")
                 {
                     output = num.ToString();
