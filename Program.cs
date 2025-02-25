@@ -6,12 +6,14 @@ namespace FizzBuzz
     {
         public static void Main()
         {
-            Console.WriteLine(GetFizzBuzz());
+            Console.WriteLine("Enter a number to FizzBuzz:");
+            int userNumber = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine(GetFizzBuzz(userNumber));
         }
-        public static string GetFizzBuzz()
+        public static string GetFizzBuzz(int maxNumber)
         {
             var result = new List<string>{};
-            for (int num = 1; num <= 255; num++)
+            for (int num = 1; num <= maxNumber; num++)
             {
                 string output = "";
                 if (num % 3 == 0)
